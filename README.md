@@ -7,7 +7,7 @@ A comprehensive Python tool for scraping HTML tables, analyzing user data, and g
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/pkscripts/web_scraper_bs4
-   cd web-scraper-project
+   cd web_scraper_bs4
    ```
 
 2. **Install Dependencies**
@@ -18,7 +18,7 @@ A comprehensive Python tool for scraping HTML tables, analyzing user data, and g
 ## Project Structure
 
 ```
-web-scraper-project/
+web_scraper_bs4/
 │
 ├── web_scraper_project.py    # Main script
 ├── index.html               # Input HTML file
