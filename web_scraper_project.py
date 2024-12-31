@@ -185,14 +185,14 @@ def create_readme():
 
 A Python-based web scraping tool that extracts user data from HTML tables and generates comprehensive reports and visualizations.
 
-## 🚀 Features
+## Features
 
 - Extracts user data (ID, Name, Email, Country, etc.)
 - Generates detailed reports and visualizations
 - Creates CSV, JSON, and PNG outputs
 - Interactive console output
 
-## 📋 Installation & Usage
+## Installation & Usage
 
 1. Install dependencies:
    ```bash
@@ -205,14 +205,14 @@ A Python-based web scraping tool that extracts user data from HTML tables and ge
    python web_scraper_project.py
    ```
 
-## 📊 Output
+## Output
 
 Check the `reports` directory for generated files:
 - user_data_[timestamp].csv
 - report_[timestamp].json
 - country_distribution_[timestamp].png
 
-## 📄 License
+## License
 
 MIT License
 """
