@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Controls Demo Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .slider {
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+            display: block;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        thead {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-title">Web Controls Demo</h1>
+        
+        <!-- Text inputs -->
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email">
+        </div>
+
+        <!-- Dropdown -->
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+            </select>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="form-group">
+            <label>Interests:</label>
+            <div>
+                <input type="checkbox" id="coding" name="interests" value="coding">
+                <label for="coding">Coding</label>
+            </div>
+            <div>
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading">Reading</label>
+            </div>
+            <div>
+                <input type="checkbox" id="traveling" name="interests" value="traveling">
+                <label for="traveling">Traveling</label>
+            </div>
+        </div>
+
+        <!-- Radio buttons -->
+        <div class="form-group">
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="form-group">
+            <label for="age">Age: <span id="age-value">25</span></label>
+            <input type="range" id="age" name="age" min="0" max="100" value="25" class="slider">
+        </div>
+
+        <!-- Table -->
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="user-row">
+                    <td>1</td>
+                    <td>Jack Rodriguez</td>
+                    <td>jack.rodriguez@example.com</td>
+                    <td>France</td>
+                </tr>
+                <tr class="user-row">
+                    <td>2</td>
+                    <td>Charlie Anderson</td>
+                    <td>charlie.anderson@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>3</td>
+                    <td>William Brown</td>
+                    <td>william.brown@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>4</td>
+                    <td>Hans Thomas</td>
+                    <td>hans.thomas@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>5</td>
+                    <td>Oscar Martinez</td>
+                    <td>oscar.martinez@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>6</td>
+                    <td>Oscar Taylor</td>
+                    <td>oscar.taylor@example.com</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr class="user-row">
+                    <td>7</td>
+                    <td>Harry Anderson</td>
+                    <td>harry.anderson@example.com</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr class="user-row">
+                    <td>8</td>
+                    <td>Maria Jones</td>
+                    <td>maria.jones@example.com</td>
+                    <td>Australia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>9</td>
+                    <td>Thomas Jones</td>
+                    <td>thomas.jones@example.com</td>
+                    <td>Canada</td>
+                </tr>
+                <tr class="user-row">
+                    <td>10</td>
+                    <td>Liu Moore</td>
+                    <td>liu.moore@example.com</td>
+                    <td>Egypt</td>
+                </tr>
+                <tr class="user-row">
+                    <td>11</td>
+                    <td>Alessandro Davis</td>
+                    <td>alessandro.davis@example.com</td>
+                    <td>Canada</td>
+                </tr>
+                <tr class="user-row">
+                    <td>12</td>
+                    <td>Mohammed Rodriguez</td>
+                    <td>mohammed.rodriguez@example.com</td>        
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>13</td>
+                    <td>Jacob Rodriguez</td>
+                    <td>jacob.rodriguez@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>14</td>
+                    <td>Jack Thomas</td>
+                    <td>jack.thomas@example.com</td>
+                    <td>Brazil</td>
+                </tr>
+                <tr class="user-row">
+                    <td>15</td>
+                    <td>John Martin</td>
+                    <td>john.martin@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>16</td>
+                    <td>George Rodriguez</td>
+                    <td>george.rodriguez@example.com</td>
+                    <td>United States</td>
+                </tr>
+                <tr class="user-row">
+                    <td>17</td>
+                    <td>Jacob Gonzalez</td>
+                    <td>jacob.gonzalez@example.com</td>
+                    <td>Spain</td>
+                </tr>
+                <tr class="user-row">
+                    <td>18</td>
+                    <td>Oliver Johnson</td>
+                    <td>oliver.johnson@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>19</td>
+                    <td>Jack Taylor</td>
+                    <td>jack.taylor@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>20</td>
+                    <td>Oliver Garcia</td>
+                    <td>oliver.garcia@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>21</td>
+                    <td>Sophie Garcia</td>
+                    <td>sophie.garcia@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>22</td>
+                    <td>Liu Smith</td>
+                    <td>liu.smith@example.com</td>
+                    <td>Norway</td>
+                </tr>
+                <tr class="user-row">
+                    <td>23</td>
+                    <td>Anna Martinez</td>
+                    <td>anna.martinez@example.com</td>
+                    <td>Norway</td>
+                </tr>
+                <tr class="user-row">
+                    <td>24</td>
+                    <td>Oscar Wilson</td>
+                    <td>oscar.wilson@example.com</td>
+                    <td>Brazil</td>
+                </tr>
+                <tr class="user-row">
+                    <td>25</td>
+                    <td>Charlie Hernandez</td>
+                    <td>charlie.hernandez@example.com</td>
+                    <td>Brazil</td>
+                </tr>
+                <tr class="user-row">
+                    <td>26</td>
+                    <td>Thomas Wilson</td>
+                    <td>thomas.wilson@example.com</td>
+                    <td>United States</td>
+                </tr>
+                <tr class="user-row">
+                    <td>27</td>
+                    <td>Oliver Thomas</td>
+                    <td>oliver.thomas@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>28</td>
+                    <td>Harry Lopez</td>
+                    <td>harry.lopez@example.com</td>
+                    <td>Australia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>29</td>
+                    <td>Hans Anderson</td>
+                    <td>hans.anderson@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>30</td>
+                    <td>Yuki Johnson</td>
+                    <td>yuki.johnson@example.com</td>
+                    <td>Japan</td>
+                </tr>
+                <tr class="user-row">
+                    <td>31</td>
+                    <td>Yuki Smith</td>
+                    <td>yuki.smith@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>32</td>
+                    <td>Thomas Taylor</td>
+                    <td>thomas.taylor@example.com</td>
+                    <td>Spain</td>
+                </tr>
+                <tr class="user-row">
+                    <td>33</td>
+                    <td>Jacob Taylor</td>
+                    <td>jacob.taylor@example.com</td>
+                    <td>Norway</td>
+                </tr>
+                <tr class="user-row">
+                    <td>34</td>
+                    <td>James Williams</td>
+                    <td>james.williams@example.com</td>
+                    <td>Egypt</td>
+                </tr>
+                <tr class="user-row">
+                    <td>35</td>
+                    <td>Maria Moore</td>
+                    <td>maria.moore@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>36</td>
+                    <td>Thomas Johnson</td>
+                    <td>thomas.johnson@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>37</td>
+                    <td>Yuki Johnson</td>
+                    <td>yuki.johnson@example.com</td>
+                    <td>Japan</td>
+                </tr>
+                <tr class="user-row">
+                    <td>38</td>
+                    <td>John Moore</td>
+                    <td>john.moore@example.com</td>
+                    <td>Canada</td>
+                </tr>
+                <tr class="user-row">
+                    <td>39</td>
+                    <td>Emma Martinez</td>
+                    <td>emma.martinez@example.com</td>
+                    <td>France</td>
+                </tr>
+                <tr class="user-row">
+                    <td>40</td>
+                    <td>James Wilson</td>
+                    <td>james.wilson@example.com</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr class="user-row">
+                    <td>41</td>
+                    <td>William Anderson</td>
+                    <td>william.anderson@example.com</td>
+                    <td>Brazil</td>
+                </tr>
+                <tr class="user-row">
+                    <td>42</td>
+                    <td>Sophie Miller</td>
+                    <td>sophie.miller@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>43</td>
+                    <td>Jack Lopez</td>
+                    <td>jack.lopez@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>44</td>
+                    <td>Jacob Jones</td>
+                    <td>jacob.jones@example.com</td>
+                    <td>Italy</td>
+                </tr>
+                <tr class="user-row">
+                    <td>45</td>
+                    <td>Maria Brown</td>
+                    <td>maria.brown@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>46</td>
+                    <td>Harry Thomas</td>
+                    <td>harry.thomas@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>47</td>
+                    <td>Mohammed Jones</td>
+                    <td>mohammed.jones@example.com</td>
+                    <td>Canada</td>
+                </tr>
+                <tr class="user-row">
+                    <td>48</td>
+                    <td>Emma Gonzalez</td>
+                    <td>emma.gonzalez@example.com</td>
+                    <td>Egypt</td>
+                </tr>
+                <tr class="user-row">
+                    <td>49</td>
+                    <td>Emma Smith</td>
+                    <td>emma.smith@example.com</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>50</td>
+                    <td>Hans Brown</td>
+                    <td>hans.brown@example.com</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr class="user-row">
+                    <td>51</td>
+                    <td>Sophie Rodriguez</td>
+                    <td>sophie.rodriguez@example.com</td>
+                    <td>China</td>
+                </tr>
+                <tr class="user-row">
+                    <td>52</td>
+                    <td>Jacob Taylor</td>
+                    <td>jacob.taylor@example.com</td>
+                    <td>Norway</td>
+                </tr>
+                <tr class="user-row">
+                    <td>53</td>
+                    <td>Oscar Jones</td>
+                    <td>oscar.jones@example.com</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr class="user-row">
+                    <td>54</td>
+                    <td>William Thomas</td>
+                    <td>william.thomas@example.com</td>
+                    <td>Brazil</td>
+                </tr>
+                <tr class="user-row">
+                    <td>55</td>
+                    <td>Jacob Thomas</td>
+                    <td>jacob.thomas@example.com</td>
+                    <td>Italy</td>
+                </tr>
+                <tr class="user-row">
+                    <td>56</td>
+                    <td>Oscar Wilson</td>
+                    <td>oscar.wilson@example.com</td>
+                    <td>Australia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>57</td>
+                    <td>Liu Rodriguez</td>
+                    <td>liu.rodriguez@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>58</td>
+                    <td>Anna Martin</td>
+                    <td>anna.martin@example.com</td>
+                    <td>Japan</td>
+                </tr>
+                <tr class="user-row">
+                    <td>59</td>
+                    <td>Sophie Johnson</td>
+                    <td>sophie.johnson@example.com</td>
+                    <td>Spain</td>
+                </tr>
+                <tr class="user-row">
+                    <td>60</td>
+                    <td>Liu Williams</td>
+                    <td>liu.williams@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>61</td>
+                    <td>Alessandro Lopez</td>
+                    <td>alessandro.lopez@example.com</td>
+                    <td>China</td>
+                </tr>
+                <tr class="user-row">
+                    <td>62</td>
+                    <td>James Gonzalez</td>
+                    <td>james.gonzalez@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>63</td>
+                    <td>Oscar Taylor</td>
+                    <td>oscar.taylor@example.com</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>64</td>
+                    <td>George Martin</td>
+                    <td>george.martin@example.com</td>
+                    <td>Norway</td>
+                </tr>
+                <tr class="user-row">
+                    <td>65</td>
+                    <td>Emma Davis</td>
+                    <td>emma.davis@example.com</td>
+                    <td>Poland</td>
+                </tr>
+                <tr class="user-row">
+                    <td>66</td>
+                    <td>Sophie Garcia</td>
+                    <td>sophie.garcia@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>67</td>
+                    <td>Jack Martinez</td>
+                    <td>jack.martinez@example.com</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr class="user-row">
+                    <td>68</td>
+                    <td>Jacob Smith</td>
+                    <td>jacob.smith@example.com</td>
+                    <td>Italy</td>
+                </tr>
+                <tr class="user-row">
+                    <td>69</td>
+                    <td>James Smith</td>
+                    <td>james.smith@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr class="user-row">
+                    <td>70</td>
+                    <td>Alessandro Martin</td>
+                    <td>alessandro.martin@example.com</td>
+                    <td>France</td>
+                </tr>
+                <tr class="user-row">
+                    <td>71</td>
+                    <td>Mohammed Moore</td>
+                    <td>mohammed.moore@example.com</td>
+                    <td>Canada</td>
+                </tr>
+                <tr class="user-row">
+                    <td>72</td>
+                    <td>William Johnson</td>
+                    <td>william.johnson@example.com</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr class="user-row">
+                    <td>73</td>
+                    <td>Alessandro Brown</td>
+                    <td>alessandro.brown@example.com</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>74</td>
+                    <td>Anna Jackson</td>
+                    <td>anna.jackson@example.com</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr class="user-row">
+                    <td>75</td>
+                    <td>Jack Gonzalez</td>
+                    <td>jack.gonzalez@example.com</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr class="user-row">
+                    <td>76</td>
+                    <td>Harry Brown</td>
+                    <td>harry.brown@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>77</td>
+                    <td>George Hernandez</td>
+                    <td>george.hernandez@example.com</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr class="user-row">
+                    <td>78</td>
+                    <td>Emma Anderson</td>
+                    <td>emma.anderson@example.com</td>
+                    <td>Egypt</td>
+                </tr>
+                <tr class="user-row">
+                    <td>79</td>
+                    <td>Emma Jackson</td>
+                    <td>emma.jackson@example.com</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>80</td>
+                    <td>Oliver Moore</td>
+                    <td>oliver.moore@example.com</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr class="user-row">
+                    <td>81</td>
+                    <td>George Moore</td>
+                    <td>george.moore@example.com</td>
+                    <td>India</td>
+                </tr>
+                <tr class="user-row">
+                    <td>82</td>
+                    <td>Alessandro Rodriguez</td>
+                    <td>alessandro.rodriguez@example.com</td>      
+                    <td>Japan</td>
+                </tr>
+                <tr class="user-row">
+                    <td>83</td>
+                    <td>Thomas Rodriguez</td>
+                    <td>thomas.rodriguez@example.com</td>
+                    <td>China</td>
+                </tr>
+                <tr class="user-row">
+                    <td>84</td>
+                    <td>Harry Hernandez</td>
+                    <td>harry.hernandez@example.com</td>
+                    <td>Italy</td>
+                </tr>
+                <tr class="user-row">
+                    <td>85</td>
+                    <td>Charlie Taylor</td>
+                    <td>charlie.taylor@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>86</td>
+                    <td>Charlie Martinez</td>
+                    <td>charlie.martinez@example.com</td>
+                    <td>Brazil</td>
+                </tr>
+                <tr class="user-row">
+                    <td>87</td>
+                    <td>Oliver Miller</td>
+                    <td>oliver.miller@example.com</td>
+                    <td>Spain</td>
+                </tr>
+                <tr class="user-row">
+                    <td>88</td>
+                    <td>Alessandro Johnson</td>
+                    <td>alessandro.johnson@example.com</td>        
+                    <td>Sweden</td>
+                </tr>
+                <tr class="user-row">
+                    <td>89</td>
+                    <td>Anna Miller</td>
+                    <td>anna.miller@example.com</td>
+                    <td>United States</td>
+                </tr>
+                <tr class="user-row">
+                    <td>90</td>
+                    <td>Hans Gonzalez</td>
+                    <td>hans.gonzalez@example.com</td>
+                    <td>Spain</td>
+                </tr>
+                <tr class="user-row">
+                    <td>91</td>
+                    <td>Oscar Anderson</td>
+                    <td>oscar.anderson@example.com</td>
+                    <td>Poland</td>
+                </tr>
+                <tr class="user-row">
+                    <td>92</td>
+                    <td>Thomas Gonzalez</td>
+                    <td>thomas.gonzalez@example.com</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr class="user-row">
+                    <td>93</td>
+                    <td>Anna Moore</td>
+                    <td>anna.moore@example.com</td>
+                    <td>South Korea</td>
+                </tr>
+                <tr class="user-row">
+                    <td>94</td>
+                    <td>Maria Smith</td>
+                    <td>maria.smith@example.com</td>
+                    <td>Norway</td>
+                </tr>
+                <tr class="user-row">
+                    <td>95</td>
+                    <td>Charlie Smith</td>
+                    <td>charlie.smith@example.com</td>
+                    <td>Australia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>96</td>
+                    <td>William Thomas</td>
+                    <td>william.thomas@example.com</td>
+                    <td>China</td>
+                </tr>
+                <tr class="user-row">
+                    <td>97</td>
+                    <td>Thomas Wilson</td>
+                    <td>thomas.wilson@example.com</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="user-row">
+                    <td>98</td>
+                    <td>William Taylor</td>
+                    <td>william.taylor@example.com</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr class="user-row">
+                    <td>99</td>
+                    <td>Emma Moore</td>
+                    <td>emma.moore@example.com</td>
+                    <td>Germany</td>
+                </tr>
+                <tr class="user-row">
+                    <td>100</td>
+                    <td>Maria Miller</td>
+                    <td>maria.miller@example.com</td>
+                    <td>Netherlands</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Buttons -->
+        <div class="form-group">
+            <button type="button" id="submit-btn">Submit</button>
+            <button type="button" id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    <script>
+       const gameContainer = document.getElementById('game-container');
+       const bow = document.getElementById('bow');
+       const scoreElement = document.getElementById('score');
+       const highScoreElement = document.getElementById('high-score');
+        let score = 0;
+       let highScore = localStorage.getItem('highScore') || 0;
+       highScoreElement.textContent = `High Score: ${highScore}`;
+        let bowAngle = 0;
+       let isAiming = false;
+        // Handle mouse/touch movement
+       function handlePointerMove(e) {
+           if (!isAiming) return;
+           
+           const rect = gameContainer.getBoundingClientRect();
+           const x = e.clientX - rect.left - bow.offsetLeft;
+           const y = e.clientY - rect.top - bow.offsetTop;
+           bowAngle = Math.atan2(y, x) * 180 / Math.PI;
+           bow.style.transform = `rotate(${bowAngle}deg)`;
+       }
+        // Handle mouse/touch start
+       function handlePointerDown() {
+           isAiming = true;
+       }
+        // Handle mouse/touch end
+       function handlePointerUp() {
+           if (!isAiming) return;
+           isAiming = false;
+           shootArrow();
+       }
+        // Shoot arrow
+       function shootArrow() {
+           const arrow = document.createElement('div');
+           arrow.className = 'arrow';
+           arrow.style.left = `${bow.offsetLeft + 40}px`;
+           arrow.style.top = `${bow.offsetTop + 20}px`;
+           arrow.style.transform = `rotate(${bowAngle}deg)`;
+           gameContainer.appendChild(arrow);
+            const speed = 10;
+           const angle = bowAngle * Math.PI / 180;
+           const vx = Math.cos(angle) * speed;
+           const vy = Math.sin(angle) * speed;
+           let x = bow.offsetLeft + 40;
+           let y = bow.offsetTop + 20;
+            const moveArrow = setInterval(() => {
+               x += vx;
+               y += vy;
+               arrow.style.left = `${x}px`;
+               arrow.style.top = `${y}px`;
+                // Check collision with targets
+               document.querySelectorAll('.target').forEach(target => {
+                   if (isColliding(arrow, target)) {
+                       target.remove();
+                       arrow.remove();
+                       clearInterval(moveArrow);
+                       updateScore();
+                   }
+               });
+                // Remove arrow if out of bounds
+               if (x < 0 || x > window.innerWidth || y < 0 || y > window.innerHeight) {
+                   arrow.remove();
+                   clearInterval(moveArrow);
+               }
+           }, 16);
+       }
+        // Spawn targets
+       function spawnTarget() {
+           const target = document.createElement('div');
+           target.className = 'target';
+           target.style.left = `${Math.random() * (window.innerWidth - 100) + 100}px`;
+           target.style.top = `${Math.random() * (window.innerHeight - 30)}px`;
+           gameContainer.appendChild(target);
+       }
+        // Check collision between two elements
+       function isColliding(elem1, elem2) {
+           const rect1 = elem1.getBoundingClientRect();
+           const rect2 = elem2.getBoundingClientRect();
+           return !(rect1.right < rect2.left || 
+                   rect1.left > rect2.right || 
+                   rect1.bottom < rect2.top || 
+                   rect1.top > rect2.bottom);
+       }
+        // Update score
+       function updateScore() {
+           score++;
+           scoreElement.textContent = `Score: ${score}`;
+           
+           if (score > highScore) {
+               highScore = score;
+               localStorage.setItem('highScore', highScore);
+               highScoreElement.textContent = `High Score: ${highScore}`;
+               celebrate();
+           }
+       }
+        // Celebration animation
+       function celebrate() {
+           const celebration = document.createElement('div');
+           celebration.className = 'celebration';
+           celebration.textContent = '🎉 New High Score! 🎉';
+           document.body.appendChild(celebration);
+           
+           setTimeout(() => {
+               celebration.remove();
+           }, 1000);
+       }
+        // Event listeners
+       gameContainer.addEventListener('pointermove', handlePointerMove);
+       gameContainer.addEventListener('pointerdown', handlePointerDown);
+       gameContainer.addEventListener('pointerup', handlePointerUp);
+        // Spawn targets periodically
+       setInterval(spawnTarget, 2000);
+        // Initial target
+       spawnTarget();
+   </script>
+/body>
+/html>
