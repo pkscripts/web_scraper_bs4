@@ -1,0 +1,117 @@
+{
+    "country_wise": [
+        {
+            "Country": "Australia",
+            "Number of Users": 4,
+            "Users": "Maria Jones, Harry Lopez, Oscar Wilson, Charlie Smith"
+        },
+        {
+            "Country": "Brazil",
+            "Number of Users": 6,
+            "Users": "Jack Thomas, Oscar Wilson, Charlie Hernandez, William Anderson, William Thomas, Charlie Martinez"
+        },
+        {
+            "Country": "Canada",
+            "Number of Users": 5,
+            "Users": "Thomas Jones, Alessandro Davis, John Moore, Mohammed Jones, Mohammed Moore"
+        },
+        {
+            "Country": "China",
+            "Number of Users": 4,
+            "Users": "Sophie Rodriguez, Alessandro Lopez, Thomas Rodriguez, William Thomas"
+        },
+        {
+            "Country": "Egypt",
+            "Number of Users": 4,
+            "Users": "Liu Moore, James Williams, Emma Gonzalez, Emma Anderson"
+        },
+        {
+            "Country": "France",
+            "Number of Users": 3,
+            "Users": "Jack Rodriguez, Emma Martinez, Alessandro Martin"
+        },
+        {
+            "Country": "Germany",
+            "Number of Users": 7,
+            "Users": "Sophie Garcia, Yuki Smith, Thomas Johnson, Liu Williams, Sophie Garcia, Charlie Taylor, Emma Moore"
+        },
+        {
+            "Country": "India",
+            "Number of Users": 7,
+            "Users": "Oliver Garcia, Maria Moore, Jack Lopez, Maria Brown, Liu Rodriguez, Harry Brown, George Moore"
+        },
+        {
+            "Country": "Italy",
+            "Number of Users": 4,
+            "Users": "Jacob Jones, Jacob Thomas, Jacob Smith, Harry Hernandez"
+        },
+        {
+            "Country": "Japan",
+            "Number of Users": 4,
+            "Users": "Yuki Johnson, Yuki Johnson, Anna Martin, Alessandro Rodriguez"
+        },
+        {
+            "Country": "Mexico",
+            "Number of Users": 3,
+            "Users": "William Johnson, Jack Gonzalez, Thomas Gonzalez"
+        },
+        {
+            "Country": "Netherlands",
+            "Number of Users": 8,
+            "Users": "Charlie Anderson, Oscar Martinez, Jacob Rodriguez, Oliver Johnson, Oliver Thomas, James Gonzalez, James Smith, Maria Miller"
+        },
+        {
+            "Country": "Norway",
+            "Number of Users": 6,
+            "Users": "Liu Smith, Anna Martinez, Jacob Taylor, Jacob Taylor, George Martin, Maria Smith"
+        },
+        {
+            "Country": "Poland",
+            "Number of Users": 2,
+            "Users": "Emma Davis, Oscar Anderson"
+        },
+        {
+            "Country": "Russia",
+            "Number of Users": 5,
+            "Users": "Emma Smith, Oscar Taylor, Alessandro Brown, Emma Jackson, Thomas Wilson"
+        },
+        {
+            "Country": "South Korea",
+            "Number of Users": 9,
+            "Users": "William Brown, Hans Thomas, Mohammed Rodriguez, John Martin, Jack Taylor, Hans Anderson, Sophie Miller, Harry Thomas, Anna Moore"
+        },
+        {
+            "Country": "Spain",
+            "Number of Users": 5,
+            "Users": "Jacob Gonzalez, Thomas Taylor, Sophie Johnson, Oliver Miller, Hans Gonzalez"
+        },
+        {
+            "Country": "Sweden",
+            "Number of Users": 5,
+            "Users": "Oscar Taylor, Oscar Jones, Jack Martinez, Alessandro Johnson, William Taylor"
+        },
+        {
+            "Country": "United Kingdom",
+            "Number of Users": 6,
+            "Users": "Harry Anderson, James Wilson, Hans Brown, Anna Jackson, George Hernandez, Oliver Moore"
+        },
+        {
+            "Country": "United States",
+            "Number of Users": 3,
+            "Users": "George Rodriguez, Thomas Wilson, Anna Miller"
+        }
+    ],
+    "statistics": {
+        "total_countries": 20,
+        "total_users": 100,
+        "active_users": 0,
+        "average_users_per_country": 5.0
+    },
+    "top_countries": {
+        "South Korea": 9,
+        "Netherlands": 8,
+        "Germany": 7,
+        "India": 7,
+        "Norway": 6
+    }
+}
